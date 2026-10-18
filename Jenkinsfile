@@ -22,7 +22,7 @@ pipeline {
                     echo "Student: ${STUDENT_NAME} ${STUDENT_SURNAME}"
                     echo "Group: ${STUDENT_GROUP}"
                     echo "Student ID: ${STUDENT_ID}"
-                    chmod +x scripts/Asan_Abai_system.sh app/student_app.sh
+                    chmod +x scripts/Aziza_Kuanysh_system.sh app/student_app.sh
                     ./scripts/Aziza_Kuanysh_system.sh
                 '''
             }
@@ -41,17 +41,17 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                sh 'docker build -t asan-abai-devops .'
-                sh 'docker images asan-abai-devops'
+                sh 'docker build -t aziza-kuanysh-devops .'
+                sh 'docker images aziza-kuanysh-devops'
             }
         }
         stage('Docker Run') {
             steps {
                 sh '''
                     docker rm -f aziza-kuanysh-container || true
-                    docker run -d --name aziza-kuanysh-container -e STUDENT_NAME=${STUDENT_NAME} -e STUDENT_SURNAME=${STUDENT_SURNAME} -e STUDENT_GROUP=${STUDENT_GROUP} -e STUDENT_ID=${STUDENT_ID} asan-abai-devops
+                    docker run -d --name aziza-kuanysh-container -e STUDENT_NAME=${STUDENT_NAME} -e STUDENT_SURNAME=${STUDENT_SURNAME} -e STUDENT_GROUP=${STUDENT_GROUP} -e STUDENT_ID=${STUDENT_ID} aziza-kuanysh-devops
                     sleep 3
-                    docker logs asan-abai-container
+                    docker logs aziza-kuanysh-container
                     docker ps
                 '''
             }
