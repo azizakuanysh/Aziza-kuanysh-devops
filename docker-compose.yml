@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    image: asan-abai-devops
+    image: aziza-kuanysh-devops
     container_name: aziza-kuanysh-container
     environment:
       - STUDENT_NAME=Aziza
