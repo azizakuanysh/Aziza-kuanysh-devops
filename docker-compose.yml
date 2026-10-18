@@ -1,0 +1,10 @@
+services:
+  app:
+    build: .
+    image: asan-abai-devops
+    container_name: aziza-kuanysh-container
+    environment:
+      - STUDENT_NAME=Aziza
+      - STUDENT_SURNAME=Kuanysh
+      - STUDENT_GROUP=IT2-2310
+      - STUDENT_ID=38287
