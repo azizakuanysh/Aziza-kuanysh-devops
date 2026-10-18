@@ -1,0 +1,5 @@
+Name: Aziza
+Surname: Kuanysh
+Group: IT2-2310
+Student ID: 38287
+Course:Devops
